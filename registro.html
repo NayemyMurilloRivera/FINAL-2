@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Creador de CV</title>
+    <link rel="icon" type="image/x-icon" href="imgcv/cv.png">
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+
+<body>
+    <header>
+        <div class="left-section">
+            <img src="<?php echo htmlspecialchars($image_url); ?>" class="circular-image" alt="Foto de perfil">
+        </div>
+        <div class="right-section">
+            <h2 style="font-family: Arial, sans-serif; font-weight: 10;"><?php echo htmlspecialchars($nombre); ?></h2>
+            <h4 style="color: rgb(180, 180, 180); font-family: Arial, sans-serif; font-weight: 300;"><?php echo htmlspecialchars($ocupacion); ?></h4>
+        </div>
+    </header>
+
+    <section style="color:rgb(0, 0, 0);">
+        <nav>
+            <h1>CONTACTO</h1>
+
+            <p><img src="imgcv/telefono-sonando.png" class="imagencaracter" alt="Teléfono"> <?php echo htmlspecialchars($telefono); ?></p>
+            <p><img src="imgcv/correo.png" class="imagencaracter" alt="Correo"><?php echo htmlspecialchars($email); ?></p>
+            <p><img src="imgcv/pasador-de-ubicacion.png" class="imagencaracter" alt="Ubicación"> <?php echo htmlspecialchars($ubicacion);  ?></p>
+            <p><img src="imgcv/logotipo-de-linkedin.png" class="imagencaracter" alt="Linkdlin"><?php echo htmlspecialchars($linke); ?></p>
+
+            <h1>DETALLES</h1>
+            <p>Fecha de nacimiento:<?php echo htmlspecialchars($fecha_nacimiento); ?></p>
+            <p>Nacionalidad:<?php echo htmlspecialchars($nacionalidad); ?></p>
+
+
+            <h1>IDIOMAS</h1>
+            <p>Español:<?php echo htmlspecialchars($español); ?></p>
+            <p>Inglés:<?php echo htmlspecialchars($ingles); ?></p>
+            <p>Francés:<?php echo htmlspecialchars($frances); ?></p>
+
+            <h1>PROGRAMACION</h1>
+            <?php
+                if (isset($_POST['lenguajes'])) {
+                    $lenguajes = $_POST['lenguajes']; 
+                } else {
+                    $lenguajes = []; 
+                }
+                foreach ($lenguajes as $lenguaje) {
+                    echo htmlspecialchars($lenguaje) . "<br>"; // Muestra cada lenguaje seleccionado
+                }
+            ?>
+            <h1>APTITUDES</h1>
+
+            <?php 
+                if (isset($_POST['aptitudes'])) {
+                    $aptitud = $_POST['aptitudes']; 
+                    echo htmlspecialchars($aptitud);
+                } else {
+                    echo "No se han ingresado aptitudes.";
+                }
+            
+            ?>
+
+            <h1>HABILIDADES</h1>
+            <?php 
+                if (!empty($habilidades)) {
+                    echo "<p>" . htmlspecialchars($habilidades) . "</p>";
+                } else {
+                    echo "<p>No se han seleccionado habilidades.</p>";
+                }
+            ?>
+
+            <h1>OTROS INTERESES</h1>
+            <?php 
+                if (!empty($interes)) {
+                    echo "<p>" . htmlspecialchars($interes) . "</p>";
+                } else {
+                    echo "<p>No se han seleccionado intereses.</p>";
+                }
+            ?>
+        </nav>
+
+        <article style="color:rgb(0, 0, 0);">
+            <h1>PERFIL</h1>
+            <p><?php echo htmlspecialchars($perfil); ?></p>
+
+            <h1>EXPERIENCIA LABORAL</h1>
+
+            <li><?php echo htmlspecialchars($experiencia); ?></li>
+            
+            <h1>FORMACIÓN</h1>
+            <li><?php echo htmlspecialchars($formacion); ?></li>
+            
+        </article>
+    </section>
+</body>
+
+</html>

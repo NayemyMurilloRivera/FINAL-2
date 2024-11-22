@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A3B77;
+    display: flex;
+    flex-direction: column; /* Mantén la dirección columna */
+    justify-content: flex-start; /* Alinea los elementos hacia arriba */
+    align-items: center;
+    min-height: 100vh;
+    margin:0;
+    margin-top:0; 
+    margin-bottom:0;
+}
+
+header {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    width: 100%; 
+    margin-top: 0; /* Elimina el margen superior */
+    margin-bottom: 0; /* Elimina el margen inferior */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar una sombra para visibilidad */
+}
+
+
+.form-container {
+    margin-top: 100px; 
+    margin-bottom: 20px; 
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center; 
+}
+
+.form-container {
+    margin-top: 100px; 
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0A3B77;
+}
+
+.form-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-description::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+.form-container {
+    border-top: 5px solid #f0c436;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.form-row .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label a {
+    text-decoration: none;
+    color:#F0C436;
+}
+
+label a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.top-bar {
+    background-color: #f0c436;
+    color: white;
+    padding: 5px 0;
+}
+
+
+.main-header {
+    background-color: white;
+    padding: 10px 0;
+}
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.letra{
+    font-size: 0.9em;
+    color: black;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+
+.top-bar {
+    background-color: #f0c436;
+    color: white;
+    padding: 5px 0;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.9em;
+}
+
+.main-header {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    max-width: 600px; /* Limita el tamaño máximo si es necesario */
+}
+
+.search-bar input {
+    flex-grow: 1; /* El input ocupa el espacio restante */
+    padding: 10px; /* Misma cantidad de padding que el botón */
+    border: 1px solid #ccc;
+    border-right: none; /* Elimina el borde derecho para unirlo visualmente con el botón */
+    border-radius: 4px 0 0 4px; /* Bordes redondeados solo a la izquierda */
+    font-size: 16px;
+    height: 100%; /* Asegura que el input tenga la misma altura que el botón */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.search-bar button {
+    padding: 10px 20px; /* Mantén el mismo padding que en el input */
+    background-color: #f0c436;
+    color: white;
+    border-radius: 0 4px 4px 0; /* Bordes redondeados solo a la derecha */
+    cursor: pointer;
+    height: 100%; /* Ajusta la altura del botón para que coincida con la del input */
+    box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+}
+
+
+.user-actions a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.main-nav {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+button {
+    background-color: #0A3B77; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a pointer cuando se pasa sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+button:hover {
+    background-color: #F6E673; /* Color de fondo cuando el usuario pasa el mouse */
+    transform: translateY(-2px); /* Efecto de desplazamiento ligero hacia arriba al hacer hover */
+}
+
+button:active {
+    background-color: #5a9ade; /* Color cuando se presiona */
+    transform: translateY(0); /* Restablece la posición cuando se presiona */
+}
